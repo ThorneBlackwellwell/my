@@ -43,7 +43,6 @@ li {
 .logo .mm {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
 }
 
 .links {
@@ -68,7 +67,9 @@ li {
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: scale 0.2s ease;
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
 }
 
 .action_btn:hover {
@@ -112,7 +113,7 @@ li {
 
 .card {
   width: 220px;
-  height: 240px;
+  height: 220px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.85);
   color: #000;
@@ -123,7 +124,7 @@ li {
 }
 
 .card:hover {
-  height: 320px;
+  height: 300px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
@@ -159,6 +160,13 @@ li {
   color: #0d47a1;
   font-weight: bold;
 }
+
+.gt {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 @media (max-width: 992px) {
   .navbar .links,

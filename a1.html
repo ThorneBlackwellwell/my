@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Web Dev Creative</title>
-  <link rel="stylesheet" href="css/a3.css" />
+  <link rel="stylesheet" href="css/a1.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,6 +46,60 @@
       });
     });
   </script>
+
+  <!-- ส่วนล่างของไฟล์ a1.html ต่อจาก <script> toggle menu -->
+
+    <div class="post-section">
+      <h2 class="section-title">โพสต์ล่าสุด</h2>
+      <input type="text" id="searchInput" placeholder="ค้นหาโพสต์..." />
+      <div id="postList" class="post-list"></div>
+    </div>
+  
+    <script>
+      // ดึงข้อมูลโพสต์ทั้งหมดจาก localStorage
+      function loadPosts() {
+        const postList = document.getElementById("postList");
+        const searchInput = document.getElementById("searchInput");
+        const posts = JSON.parse(localStorage.getItem("posts")) || [];
+  
+        function render(filteredPosts) {
+          postList.innerHTML = "";
+          if (filteredPosts.length === 0) {
+            postList.innerHTML = "<p style='color:white;'>ไม่พบโพสต์</p>";
+            return;
+          }
+  
+          filteredPosts.forEach(post => {
+            const postCard = document.createElement("div");
+            postCard.className = "post-card";
+            postCard.innerHTML = `
+              <img src="${post.image}" alt="Post Image" class="post-image" />
+              <div class="post-content">
+                <h3>${post.title}</h3>
+                <p>${post.body}</p>
+              </div>
+            `;
+            postList.appendChild(postCard);
+          });
+        }
+  
+        searchInput.addEventListener("input", () => {
+          const keyword = searchInput.value.toLowerCase();
+          const filtered = posts.filter(post =>
+            post.title.toLowerCase().includes(keyword) || post.body.toLowerCase().includes(keyword)
+          );
+          render(filtered);
+        });
+  
+        render(posts);
+      }
+  
+      document.addEventListener("DOMContentLoaded", loadPosts);
+    </script>
+  
+  </body>
+  </html>
+  
 
 </body>
 </html>

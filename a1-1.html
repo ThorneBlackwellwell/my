@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบตรวจสอบรหัสผ่าน</title>
+    <link rel="stylesheet" href="css/a1-1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>กรุณากรอกรหัสผ่าน</h1>
+        <form id="passwordForm">
+            <input type="password" id="password" placeholder="ใส่รหัสผ่าน">
+            <button type="submit">เข้าสู่ระบบ</button>
+        </form>
+        <div id="linkContainer" style="display: none;">
+            <a href="a1-2.html" target="_blank">คลิกที่นี่เพื่อไปยังลิงค์</a>
+        </div>
+    </div>
+
+    <script>
+        const passwordForm = document.getElementById("passwordForm");
+        const passwordInput = document.getElementById("password");
+        const linkContainer = document.getElementById("linkContainer");
+
+        passwordForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const correctPassword = "12345"; // ลองเปลี่ยนรหัสตามที่ต้องการ
+
+            if (passwordInput.value === correctPassword) {
+                linkContainer.style.display = "block";
+            } else {
+                alert("รหัสผ่านไม่ถูกต้อง!");
+            }
+        });
+    </script>
+</body>
+</html>

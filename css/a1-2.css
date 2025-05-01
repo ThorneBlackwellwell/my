@@ -42,19 +42,6 @@
     font-size: 1.5rem;
     font-weight: bold;
   }
-
-  h1 {
-    font-family: "Charmonman", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  h1 {
-    font-family: "Charmonman", cursive;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
   
   .links {
     display: flex;
@@ -80,13 +67,12 @@
     cursor: pointer;
     transition: scale 0.2s ease;
   }
-
+  
   .action_btn {
     font-family: "Sriracha", cursive;
     font-weight: 400;
     font-style: normal;
   }
-  
   
   .navbar .action_btn:hover {
     transform: scale(1.05);
@@ -119,20 +105,11 @@
     padding: 0.7rem;
     text-align: center;
   }
-
-  section#hero {
-    height: calc(100vh - 60px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-  }
-
-  #hero h1{
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  
+  .gt {
+    font-family: "Sriracha", cursive;
+    font-weight: 400;
+    font-style: normal;
   }
   
   @media (max-width: 992px) {
@@ -149,3 +126,98 @@
       display: none;
     }
   }
+  
+  .manage-container {
+    max-width: 900px;
+    margin: 80px auto 50px;
+    padding: 0 20px;
+  }
+  
+  .manage-container h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Sriracha', cursive;
+  }
+  
+  #postForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  #postForm input[type="text"],
+  #postForm textarea,
+  #postForm input[type="file"] {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  #postForm textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  #postForm button {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  #postForm button:hover {
+    transform: scale(1.05);
+  }
+  
+  #searchManage {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .post-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
+  }
+  
+  .post-card img.post-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    object-fit: cover;
+    height: 180px;
+  }
+  
+  .post-card button {
+    margin-top: 0.5rem;
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
