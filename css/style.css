@@ -123,6 +123,10 @@ section#hero {
   margin-bottom: 1rem;
 }
 
+.hero {
+  z-index: -1;
+}
+
 /* โลโก้ */
 .hero-logo {
   width: 150px;
