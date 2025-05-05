@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kopura Simanakhon</title>
+  <link rel="stylesheet" href="css/a6.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo"><a href="a5.html" class="mm">DR Frash Plus SMC</a></div>
+    <ul class="links">
+
+      <li><a class="gt" href="a2.html">สินค้า</a></li>
+      <li><a class="gt" href="a3.html">การตลาด</a></li>
+
+    </ul>
+    <a href="a6.html" class="action_btn">ติดต่อเรา</a>
+    <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+  <div class="dropdown_menu">
+
+    <li><a class="gt" href="a2.html">สินค้า</a></li>
+    <li><a class="gt" href="a3.html">การตลาด</a></li>
+
+    <li><a href="a6.html" class="action_btn">ติดต่อเรา</a></li>
+  </div>
+
+  <div class="xs">
+    <div class="card">
+      <div class="ing">
+        <img class="r" src="ing/491939376_3062019870614338_6172308205848132461_n.jpg" alt="">
+      </div>
+      <div class="detali">
+        <p>คุณ ปาลิกา</p>
+        <small>เจ้าของเว็บไซต์</small>
+      </div>
+      <div class="contact">
+        <p><i class="fa-solid fa-phone"></i> 093-752-5658</p>
+        <p><i class="fa-brands fa-facebook"></i> <a class="s" href="https://www.facebook.com/share/1YZBCSGsQz/">คุณ ปาลิกา</a></p>
+        <p><i class="fa-brands fa-line"></i> LINE ID</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="ing">
+        <img class="r" src="ing/480773358_1323741048951660_7947124102430893848_n.jpg" alt="">
+      </div>
+      <div class="detali">
+        <p>คุณ ธนภัทร</p>
+        <small>โปรแกรมเมอร์</small>
+      </div>
+      <div class="contact">
+        <p><i class="fa-solid fa-phone"></i> 093-759-3269</p>
+        <p><i class="fa-brands fa-facebook"></i> <a class="s" href="https://www.facebook.com/share/16RrQz3HN8/">Thanaphat Min</a></p>
+        <p><i class="fa-brands fa-line"></i> LINE ID</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.querySelector('.toggle_btn');
+      const dropDownMenu = document.querySelector('.dropdown_menu');
+
+      toggleBtn.addEventListener('click', function () {
+        dropDownMenu.classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kopura Simanakhon</title>
+  <link rel="stylesheet" href="css/a2.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo"><a href="a5.html" class="mm">DR Frash Plus SMC</a></div>
+    <ul class="links">
+
+      <li><a class="gt" href="a2.html">สินค้า</a></li>
+      <li><a class="gt" href="a3.html">การตลาด</a></li>
+
+    </ul>
+    <a href="a6.html" class="action_btn">ติดต่อเรา</a>
+    <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+  <div class="dropdown_menu">
+
+    <li><a class="gt" href="a2.html">สินค้า</a></li>
+    <li><a class="gt" href="a3.html">การตลาด</a></li>
+ 
+    <li><a href="a6.html" class="action_btn">ติดต่อเรา</a></li>
+  </div>
+
+  <section class="posts-container">
+    <div class="post" onclick="openModal(1)">
+      <img src="ing/494579094_3532334287074386_643715711800527850_n.jpg" alt="โพสต์ 1" />
+      <h3>TEA SINA</h3>
+    </div>
+    <div class="post" onclick="openModal(2)">
+      <img src="ing/494573788_1240391184458702_1325683329030942317_n.jpg" alt="โพสต์ 2" />
+      <h3>COGGEE NABI</h3>
+    </div>
+    <div class="post" onclick="openModal(3)">
+      <img src="ing/494575576_1838467736694415_6763025063362992624_n.jpg" alt="โพสต์ 3" />
+      <h3>COCOA MAYA</h3>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modal-text"></div>
+      <a id="more-link" href="#" class="more-btn" target="_blank">ข้อมูลเพิ่มเติม</a>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const modalText = document.getElementById('modal-text');
+    const moreLink = document.getElementById('more-link');
+
+    const postContent = {
+      1: {
+        text: "ชาเขียวอัสสัมเป็นทางเลือกที่น่าสนใจสำหรับผู้ที่ต้องการเครื่องดื่มสุขภาพที่มีรสชาติเข้มข้นกว่าชาเขียวทั่วไป พร้อมคุณประโยชน์มากมาย ทั้งด้านการต้านอนุมูลอิสระ เสริมการทำงานของอวัยวะขับของเสีย และช่วย ล้างเลือด ทางอ้อมผ่านกลไกธรรมชาติของร่างกาย หากดื่มเป็นประจำในปริมาณที่เหมาะสม ชานี้สามารถเป็นหนึ่งในตัวช่วยส่งเสริมสุขภาพได้อย่างมีประสิทธิภาพ",
+        link: "a2-1.html"
+      },
+      2: {
+        text: "NABI COFFEE กาแฟสุขภาพที่รวมสารสกัดพรีเมียมถึง 36 ชนิดในซองเดียว ช่วยเผาผลาญไขมัน ควบคุมความหิว ขับถ่ายดี ผิวใส บำรุงสมอง สายตา และภูมิคุ้มกัน ไม่มีน้ำตาล ดื่มง่าย ได้หุ่นดีและสุขภาพครบในแก้วเดียว",
+        link: "a2-2.html"
+      },
+      3: {
+        text: "เครื่องดื่มโกโก้สุขภาพสูตรพิเศษ MAYA ที่รวมคุณค่าจากโกโก้แท้เข้มข้นถึง 30% ผสานกับสารอาหารกว่า 30 ชนิดในซองเดียว เพื่อให้คุณทั้งอร่อย หุ่นดี และสุขภาพดีไปพร้อมกันอย่างลงตัว ไม่เพียงแค่ให้รสชาติหอมละมุนจากโกโก้แท้ แต่ยังเสริมด้วยเวย์โปรตีนไอโซเลทสำหรับการสร้างกล้ามเนื้อ ครีมเทียมจากน้ำมันมะพร้าวที่ให้ไขมันดี (MCT) เพื่อการเผาผลาญที่ดีขึ้น และใยอาหารจากอินนูลิน ไซเลียมฮัสก์ และโพลีเด็กซ์โทรส ที่ช่วยระบบขับถ่ายอย่างมีประสิทธิภาพนอกจากนี้ ยังเสริมด้วยสารสกัดจากธรรมชาติที่เป็นที่รู้จักในกลุ่มคนรักสุขภาพ เช่น ถั่วขาว ชาเขียว ส้มแขก กระบองเพชร บุก และเมล็ดกาแฟไม่คั่ว ซึ่งช่วยในการควบคุมน้ำหนัก ลดการดูดซึมแป้งและไขมัน รวมถึงลดความอยากอาหาร ช่วยให้อิ่มนาน ไม่หิวจุกจิกระหว่างวัน ทั้งยังมีสารอาหารสำคัญอย่างแคลเซียม อะมิโนแอซิดคีเลต เบต้าแคโรทีน ไฟโตสเตอรอล และโครเมียมพิโคลิเนต ที่ช่วยบำรุงร่างกาย เสริมภูมิคุ้มกัน ควบคุมน้ำตาลในเลือด และดูแลผิวพรรณให้เปล่งปลั่งสุขภาพดีเครื่องดื่มนี้เหมาะสำหรับทุกคนที่ต้องการควบคุมน้ำหนัก ดูแลรูปร่าง หรือมองหาเครื่องดื่มสุขภาพที่ดื่มง่าย อิ่มท้อง แถมยังปราศจากน้ำตาลและนมวัว เหมาะสำหรับผู้แพ้แลคโตสอีกด้วย เพียงวันละซอง ฉีก ชง ดื่ม ก็สามารถเปลี่ยนโกโก้ธรรมดา ให้กลายเป็นเครื่องดื่มสุขภาพที่ครบ จบในแก้วเดียว",
+        link: "a2-3.html"
+      }
+    };
+
+    function openModal(id) {
+      modalText.textContent = postContent[id].text;
+      moreLink.href = postContent[id].link;
+      modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    window.addEventListener('click', function(e) {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.querySelector('.toggle_btn');
+      const dropDownMenu = document.querySelector('.dropdown_menu');
+
+      toggleBtn.addEventListener('click', function () {
+        dropDownMenu.classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #000;
+  background-image: url("https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&auto=format&fit=crop&w=1517&q=80");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+a:hover {
+  color: orange;
+}
+
+li {
+  list-style: none;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  backdrop-filter: blur(8px);
+}
+
+.logo .mm {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn {
+  background-color: orange;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+}
+
+.action_btn:hover {
+  transform: scale(1.05);
+}
+
+.action_btn:active {
+  transform: scale(0.95);
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.dropdown_menu.open {
+  display: flex;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  text-align: center;
+}
+
+.xs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #000;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  height: 300px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card .ing {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.card .ing .r {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .r {
+  transform: scale(1.05);
+}
+
+.detali {
+  padding: 10px 16px;
+  font-weight: bold;
+}
+
+.contact {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.s {
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+.gt {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: none;
+  }
+}
