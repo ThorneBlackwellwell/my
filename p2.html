@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>รายชื่อหอพัก</title>
+  <link rel="stylesheet" href="css/p2.css">
+</head>
+<body>
+  <div class="container">
+    <h1>รายชื่อหอพัก</h1>
+    <input type="text" id="searchInput" placeholder="ค้นหาด้วยชื่อหรือชื่อเล่น..." onkeyup="search()">
+
+    <h2>🏢 หอพักชาย</h2>
+    <div class="dorm-list" id="maleDorm">
+      <!-- ตัวอย่างข้อมูล -->
+      <div class="dorm" data-name="สมชาย" data-nickname="ตี๋">
+        <h3>ห้อง 101</h3>
+        <p>ชื่อ: สมชาย</p>
+        <p>ชื่อเล่น: ตี๋</p>
+        <p>เบอร์: 0801234567</p>
+      </div>
+      <div class="dorm" data-name="กิตติ" data-nickname="บาส">
+        <h3>ห้อง 102</h3>
+        <p>ชื่อ: กิตติ</p>
+        <p>ชื่อเล่น: บาส</p>
+        <p>เบอร์: 0812345678</p>
+      </div>
+    </div>
+
+    <h2>🏢 หอพักหญิง</h2>
+    <div class="dorm-list" id="femaleDorm">
+      <div class="dorm" data-name="ปรียา" data-nickname="ปุ้ย">
+        <h3>ห้อง 201</h3>
+        <p>ชื่อ: ปรียา</p>
+        <p>ชื่อเล่น: ปุ้ย</p>
+        <p>เบอร์: 0898765432</p>
+      </div>
+      <div class="dorm" data-name="อรทัย" data-nickname="หมิว">
+        <h3>ห้อง 202</h3>
+        <p>ชื่อ: อรทัย</p>
+        <p>ชื่อเล่น: หมิว</p>
+        <p>เบอร์: 0865432198</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function search() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const dorms = document.querySelectorAll('.dorm');
+
+      dorms.forEach(dorm => {
+        const name = dorm.dataset.name.toLowerCase();
+        const nickname = dorm.dataset.nickname.toLowerCase();
+
+        if (name.includes(input) || nickname.includes(input)) {
+          dorm.style.display = 'block';
+        } else {
+          dorm.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

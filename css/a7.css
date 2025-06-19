@@ -11,6 +11,7 @@ body {
   background-image: url("https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&auto=format&fit=crop&w=1517&q=80");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 li {
@@ -83,6 +84,7 @@ a:hover {
   border-radius: 10px;
   overflow: hidden;
   flex-direction: column;
+  z-index: 5;
 }
 
 .dropdown_menu.open {
@@ -132,6 +134,7 @@ a:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
   text-align: center;
+  z-index: 1;
 }
 
 .post img {

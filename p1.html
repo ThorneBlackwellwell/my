@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ใส่รหัส</title>
+    <link rel="stylesheet" href="css/p1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>กรุณาใส่รหัส</h1>
+        <input type="password" id="codeInput" placeholder="ใส่รหัสที่นี่">
+        <button onclick="checkCode()">ยืนยัน</button>
+        <p id="errorMsg"></p>
+    </div>
+
+    <script>
+        function checkCode() {
+            const code = document.getElementById("codeInput").value;
+            if (code === "666") {
+                window.location.href = "p3.html";
+            } else if (code === "883") {
+                window.location.href = "p2.html";
+            } else {
+                document.getElementById("errorMsg").textContent = "รหัสไม่ถูกต้อง ลองใหม่อีกครั้ง";
+            }
+        }
+    </script>
+</body>
+</html>
